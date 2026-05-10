@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="org.example.dice3d.MainController">
+
+   <!-- 3D сцена -->
+   <Pane fx:id="scenePane"/>
+
+   <!-- HUD-панель -->
+   <VBox spacing="10"
+         prefWidth="220"
+         maxWidth="220"
+         maxHeight="180"
+         pickOnBounds="false"
+         StackPane.alignment="TOP_RIGHT"
+         translateX="-20"
+         translateY="20"
+         style="
+            -fx-padding: 12;
+            -fx-background-color: rgba(40,40,40,0.45);
+            -fx-background-radius: 12;
+      ">
+
+      <padding>
+         <Insets top="10" right="10"
+                 bottom="10" left="10"/>
+      </padding>
+
+      <Label text="Фоновый свет"
+             style="-fx-text-fill: white;"/>
+
+      <Slider fx:id="ambientSlider"
+              max="1"
+              value="0.3"/>
+
+      <Label text="Затухание света"
+             style="-fx-text-fill: white;"/>
+
+      <Slider fx:id="attenuationSlider"
+              max="0.05"
+              value="0.01"/>
+
+      <Button text="Бросить кубик"
+              onAction="#rollDice"/>
+
+   </VBox>
+
+</StackPane>
