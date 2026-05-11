@@ -378,4 +378,9 @@ public class MainController {
 
         timer.start();
     }
+
+    @FXML
+    public void returnFocus() {
+        root3D.requestFocus();
+    }
 }
