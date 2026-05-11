@@ -35,17 +35,20 @@
 
       <Slider fx:id="ambientSlider"
               max="1"
-              value="0.3"/>
+              value="0.3"
+              focusTraversable="false"/>
 
       <Label text="Затухание света"
              style="-fx-text-fill: white;"/>
 
       <Slider fx:id="attenuationSlider"
               max="0.05"
-              value="0.01"/>
+              value="0.01"
+              focusTraversable="false"/>
 
       <Button text="Бросить кубик"
-              onAction="#rollDice"/>
+              onAction="#rollDice"
+              focusTraversable="false"/>
 
    </VBox>
 
